@@ -8,7 +8,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'niraj-portfolio';
+  title = 'nihal-portfolio';
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer){
 
