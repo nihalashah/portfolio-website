@@ -116,6 +116,7 @@ export class HomeExpertiseComponent implements OnInit {
       "link": "https://www.java.com/en/",
       "tab": "design"
     },
+
     {
       "id": "8101",
       "name": "Angular",
@@ -130,48 +131,25 @@ export class HomeExpertiseComponent implements OnInit {
       "name": "Python",
       "logo": "assets/img/tools/python.png",
       "link": "https://www.python.org/",
-      "tab": "design"
+      "tab": "back-end"
     },
 
     {
-      "id": "8103",
-      "name": "WebComponents",
-      "logo": "assets/img/tools/web-component-logo.png",
-      "link": "https://www.webcomponents.org/",
-      "tab": "web"
+      "id": "112",
+      "name": "JavaScript",
+      "logo": "assets/img/tools/javascript.png",
+      "link": "https://www.javascript.com/",
+      "tab": "back-end"
     },
+
     {
-      "id": "8105",
-      "name": "HighCharts js",
-      "logo": "assets/img/tools/highchart-logo.png",
-      "link": "https://www.highcharts.com/",
-      "tab": "web"
-    },
-    {
-      "id": "8108",
-      "name": "Sass",
-      "logo": "assets/img/tools/sass-logo.svg",
-      "link": "https://sass-lang.com/",
+      "id": "0003",
+      "name": "TypeScript",
+      "logo": "assets/img/tools/typescript.png",
+      "link": "https://www.typescriptlang.org/",
       "tab": "web",
-      "color": "#CF649A"
+      "color": "#859bed"
     },
- 
-    {
-      "id": "8104",
-      "name": "Ngrx",
-      "logo": "assets/img/tools/ngrx.svg",
-      "link": "https://ngrx.io/",
-      "tab": "web"
-    },
-
-    {
-      "id": "8109",
-      "name": "Scully",
-      "logo": "assets/img/tools/scully.svg",
-      "link": "https://https://scully.io/",
-      "tab": "web",
-    },
-
 
     {
       "id": "7126",
@@ -183,14 +161,6 @@ export class HomeExpertiseComponent implements OnInit {
 
 
     {
-      "id": "6121",
-      "name": "Firebase",
-      "logo": "assets/img/tools/firebase.svg",
-      "link": "https://firebase.google.com/",
-      "tab": "cloud"
-    },
-
-    {
       "id": "6123",
       "name": "Azure",
       "logo": "assets/img/tools/azure.png",
@@ -200,7 +170,7 @@ export class HomeExpertiseComponent implements OnInit {
 
     {
       "id": "6124",
-      "name": "Google cloud",
+      "name": "Google Cloud",
       "logo": "assets/img/tools/google-cloud.png",
       "link": "https://cloud.google.com/",
       "tab": "cloud"

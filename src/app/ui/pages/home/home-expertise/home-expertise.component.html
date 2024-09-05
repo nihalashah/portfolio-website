@@ -21,7 +21,9 @@
             <div fxLayout.gt-xs="row wrap" fxLayout.xs="column" fxLayoutAlign="space-between stretch">
 
                 <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:200}}" fxFlex.gt-xs="46"
-                    fxFlex.xs="none" [isColored]="true" jobType="Design" [parts]='["UI/UX",  "Logo" , "Prototyping"]'>
+                    fxFlex.xs="none" 
+                    [isColored]="true" 
+                    jobType="Design" [parts]='["UI/UX",  "Logo" , "Prototyping"]'>
                 </app-expertise-item>
                 <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:300}}" fxFlex.gt-xs="46"
                     fxFlex.xs="none" jobType="Android Development"
