@@ -31,9 +31,15 @@ export class ExpertiseItemComponent implements OnInit {
       this._mIsColored = data 
     }
   }
+  @Input('descriptions') set descriptions(data: String[]) { // New input for descriptions
+    if (data && data.length > 0) {
+      this._mDescriptions = data;
+    }
+  }
   _mParts: String  = ""
   _mJobType: String = ""
   _mIsColored: boolean = false
+  _mDescriptions: String[] = [];
   constructor() { }
 
   ngOnInit(): void {

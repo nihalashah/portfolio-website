@@ -17,23 +17,42 @@
 
             <div ngClass.gt-xs="tb-height--56" ngClass.xs="tb-height--20"></div>
 
-<!-- 
-            <div fxLayout.gt-xs="row wrap" fxLayout.xs="column" fxLayoutAlign="space-between stretch">
 
-                <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:200}}" fxFlex.gt-xs="46"
-                    fxFlex.xs="none" 
-                    [isColored]="true" 
-                    jobType="Design" [parts]='["UI/UX",  "Logo" , "Prototyping"]'>
-                </app-expertise-item>
-                <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:300}}" fxFlex.gt-xs="46"
-                    fxFlex.xs="none" jobType="Android Development"
-                    [parts]='["Jetpack Compose" , "Architecture Component"]'></app-expertise-item>
-                <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:400}}" fxFlex.gt-xs="46"
-                    fxFlex.xs="none" jobType="Web Development" [parts]='[ "Angular" , "React"]'></app-expertise-item>
-                <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:500}}" fxFlex.gt-xs="46"
-                    fxFlex.xs="none" jobType="Cross Platform Development" [parts]='[ "Flutter", "Jetbrain Compose"]'>
-                </app-expertise-item>
-            </div> -->
+            <div fxLayout="column" fxLayoutAlign="space-between stretch">
+                <!-- Section 1 -->
+                <div fxLayout.gt-xs="row wrap" fxLayout.xs="column" fxLayoutAlign="space-between stretch">
+                    <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:300}}" 
+                                        fxFlex.gt-xs="46" fxFlex.xs="none" 
+                                        jobType="Associate Software Engineer"
+                                        [parts]='["Azilen Technologies"]'
+                                        [descriptions]="[
+                                            'Contributed to client-facing projects.',
+                                            'Improved software performance and reliability.',
+                                            'Collaborated with senior engineers to implement new features.']">
+                    </app-expertise-item>
+            
+                    <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:400}}" 
+                                        fxFlex.gt-xs="46" fxFlex.xs="none" 
+                                        jobType="Software Engineer Intern" 
+                                        [parts]='["Azilen Technologies"]'
+                                        [descriptions]="[
+                                            'Contributed to in-house projects.',
+                                            'Developed a software to ease IT team operations.']">
+                    </app-expertise-item>
+            
+                    <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:500}}" 
+                                        fxFlex.gt-xs="46" fxFlex.xs="none" 
+                                        jobType="Full Stack Developer Intern" 
+                                        [parts]='["Tech Celerity Global Solutions Pvt. Ltd."]'
+                                        [descriptions]="[
+                                            'Developed frontend using Angular.',
+                                            'Implemented backend solutions using Java and Spring Boot.',
+                                            'Optimized API performance and user experience.'
+                                        ]">
+                    </app-expertise-item>
+                </div>
+            </div>
+            
 
             <div ngClass.gt-xs="tb-height--56" ngClass.xs="tb-height--20"></div>
 

@@ -114,7 +114,47 @@ export class HomeExpertiseComponent implements OnInit {
       "name": "Java",
       "logo": "assets/img/tools/java-logo.png",
       "link": "https://www.java.com/en/",
+      "tab": "back-end"
+    },
+
+    {
+      "id": "89798",
+      "name": "Spring Boot",
+      "logo": "assets/img/tools/spring-boot.png",
+      "link": "https://spring.io/projects/spring-boot",
+      "tab": "back-end"
+    },
+
+    {
+      "id": "8787",
+      "name": "Liferay",
+      "logo": "assets/img/tools/liferay.png",
+      "link": "https://spring.io/projects/spring-boot",
       "tab": "design"
+    },
+
+    {
+      "id": "1133",
+      "name": "HTML",
+      "logo": "assets/img/tools/html.png",
+      "link": "https://html.com/",
+      "tab": "back-end"
+    },
+
+    {
+      "id": "2233",
+      "name": "CSS",
+      "logo": "assets/img/tools/css.png",
+      "link": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+      "tab": "back-end"
+    },
+
+    {
+      "id": "555",
+      "name": "Git",
+      "logo": "assets/img/tools/git.png",
+      "link": "https://git-scm.com/",
+      "tab": "back-end"
     },
 
     {
@@ -152,6 +192,22 @@ export class HomeExpertiseComponent implements OnInit {
     },
 
     {
+      "id": "5567465",
+      "name": "C",
+      "logo": "assets/img/tools/c.png",
+      "link": "https://visualstudio.microsoft.com/vs/features/cplusplus/",
+      "tab": "web",
+    },
+
+    {
+      "id": "6757676",
+      "name": "C++",
+      "logo": "assets/img/tools/c++.png",
+      "link": "https://visualstudio.microsoft.com/vs/features/cplusplus/",
+      "tab": "web",
+    },
+
+    {
       "id": "7126",
       "name": "NodeJs",
       "logo": "assets/img/tools/nodejs.png",
@@ -174,6 +230,22 @@ export class HomeExpertiseComponent implements OnInit {
       "logo": "assets/img/tools/google-cloud.png",
       "link": "https://cloud.google.com/",
       "tab": "cloud"
+    },
+
+    {
+      "id": "2222",
+      "name": "MySQL",
+      "logo": "assets/img/tools/Mysql.png",
+      "link": "https://www.mysql.com/",
+      "tab": "database"
+    },
+
+    {
+      "id": "2223",
+      "name": "MongoDB",
+      "logo": "assets/img/tools/mongodb.png",
+      "link": "https://www.mongodb.com/",
+      "tab": "database",
     },
 
 
