@@ -114,7 +114,8 @@ export class HomeExpertiseComponent implements OnInit {
       "name": "Java",
       "logo": "assets/img/tools/java-logo.png",
       "link": "https://www.java.com/en/",
-      "tab": "back-end"
+      "tab": "back-end",
+      "color": "#bfbd1b"
     },
 
     {
