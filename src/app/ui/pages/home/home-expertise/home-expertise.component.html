@@ -18,41 +18,59 @@
             <div ngClass.gt-xs="tb-height--56" ngClass.xs="tb-height--20"></div>
 
 
-            <div fxLayout="column" fxLayoutAlign="space-between stretch">
-                <!-- Section 1 -->
-                <div fxLayout.gt-xs="row wrap" fxLayout.xs="column" fxLayoutAlign="space-between stretch">
-                    <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:300}}" 
-                                        fxFlex.gt-xs="46" fxFlex.xs="none" 
-                                        jobType="Associate Software Engineer"
-                                        [parts]='["Azilen Technologies"]'
-                                        [descriptions]="[
-                                            'Contributed to client-facing projects.',
-                                            'Improved software performance and reliability.',
-                                            'Collaborated with senior engineers to implement new features.']">
-                    </app-expertise-item>
-            
-                    <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:400}}" 
-                                        fxFlex.gt-xs="46" fxFlex.xs="none" 
-                                        jobType="Software Engineer Intern" 
-                                        [parts]='["Azilen Technologies"]'
-                                        [descriptions]="[
-                                            'Contributed to in-house projects.',
-                                            'Developed a software to ease IT team operations.']">
-                    </app-expertise-item>
-            
-                    <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:500}}" 
-                                        fxFlex.gt-xs="46" fxFlex.xs="none" 
-                                        jobType="Full Stack Developer Intern" 
-                                        [parts]='["Tech Celerity Global Solutions Pvt. Ltd."]'
-                                        [descriptions]="[
-                                            'Developed frontend using Angular.',
-                                            'Implemented backend solutions using Java and Spring Boot.',
-                                            'Optimized API performance and user experience.'
-                                        ]">
-                    </app-expertise-item>
+            <div fxLayout="column" class="timeline-container">
+                <div fxLayout="row" fxLayoutAlign="start stretch" class="timeline-item">
+                    <!-- Timeline Line and Dot -->
+                    <div class="timeline-dot-container">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+
+                    <!-- component.html -->
+                    <div class="experience-content">
+                        <app-expertise-item jobType="Associate Software Engineer" [parts]='["Azilen Technologies"]' [descriptions]="description1">
+                        </app-expertise-item>
+                      </div>
+
+
+                </div>
+
+                <div fxLayout="row" fxLayoutAlign="start stretch" class="timeline-item">
+                    <div class="timeline-dot-container">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+
+                    <div class="experience-content">
+                        <app-expertise-item jobType="Software Engineer Intern" [parts]='["Azilen Technologies"]'
+                            [descriptions]="description2">
+                        </app-expertise-item>
+                    </div>
+
+                </div>
+
+                <div fxLayout="row" fxLayoutAlign="start stretch" class="timeline-item">
+                    <div class="timeline-dot-container">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                        <!-- Last item: no vertical line -->
+                    </div>
+
+                    <div class="experience-content">
+
+                        <app-expertise-item jobType="Full Stack Developer Intern"
+                            [parts]='["Tech Celerity Global Solutions Pvt. Ltd."]' [descriptions]="description3">
+                        </app-expertise-item>
+                    </div>
                 </div>
             </div>
-            
+
+
+
+
+
+
+
 
             <div ngClass.gt-xs="tb-height--56" ngClass.xs="tb-height--20"></div>
 
@@ -65,27 +83,26 @@
             </div>
             <div ngClass.gt-xs="tb-height--36" ngClass.xs="tb-height--20"></div>
 
-            <div  [@transitionImageScale]="{value:_mTriggerAnim, params: {animDelay: 600}}" fxLayout="row wrap"  fxLayoutGap="16" fxLayoutGap.xs="8">
+            <div [@transitionImageScale]="{value:_mTriggerAnim, params: {animDelay: 600}}" fxLayout="row wrap"
+                fxLayoutGap="16" fxLayoutGap.xs="8">
 
                 <ng-container *ngFor="let tool of _mTools">
 
-                    <a class="tool unlink current-elevation--2"
-                    
-                    [style.backgroundColor]='tool?.color ?? "#fff" '
-
-                    fxLayout="row" fxLayoutGap="8" fxLayoutAlign="start center"
-                     target="_blank" rel="noopener" [href]="tool.link" >
+                    <a class="tool unlink current-elevation--2" [style.backgroundColor]='tool?.color ?? "#fff" '
+                        fxLayout="row" fxLayoutGap="8" fxLayoutAlign="start center" target="_blank" rel="noopener"
+                        [href]="tool.link">
 
                         <div class="tool-image-area">
 
-                            <img class="tb-image" [src]="tool.logo"/>
+                            <img class="tb-image" [src]="tool.logo" />
                         </div>
-    
-                        <h5 class="current-typo--h5" [style.color]='tool?.color ? "#fff" : "#000"'  ngClass.xs="current-typo--h6">{{tool.name}}</h5>
-    
+
+                        <h5 class="current-typo--h5" [style.color]='tool?.color ? "#fff" : "#000"'
+                            ngClass.xs="current-typo--h6">{{tool.name}}</h5>
+
                     </a>
                 </ng-container>
-               
+
             </div>
 
 
