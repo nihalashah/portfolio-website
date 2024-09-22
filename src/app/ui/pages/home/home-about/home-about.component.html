@@ -12,7 +12,9 @@
         <div fxLayout="column" fxLayoutAlign="start stretch">
             <!-- <p>home-about works!</p> -->
 
-            <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:100}}" fxLayout="row"
+            <div ngClass.gt-xs="tb-height--40" ngClass.xs="tb-height--20"></div>
+
+            <div fxLayout="row"
                 fxLayoutAlign="start end">
                 <h4 class="title current-typo--h4 tb-flex--shrink-0">About Me.</h4>
                 <div class="tb-width--12"></div>
@@ -59,7 +61,7 @@
 
                     <div ngClass.gt-sm="tb-height--56" ngClass.sm="tb-height--46" ngClass.xs="tb-height--32"></div>
 
-                    <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:400}}" fxLayout="row wrap"
+                    <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:10}}" fxLayout="row wrap"
                         fxLayoutGap="6">
                         <div class="skill" style="background-color: #f57088;">  
                             <h5 class="current-typo--h5">Development</h5>
@@ -76,7 +78,7 @@
                     </div>
                     <div class="tb-height--8"></div>
 
-                    <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:500}}" fxLayout="row wrap"
+                    <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:10}}" fxLayout="row wrap"
                         fxLayoutGap="6">
 
                         <div class="skill" style="background-color: #7fe6e4;">
@@ -120,7 +122,7 @@
                 </div>
                 <div fxFlex.xs="none" fxFlex [fxFlexOrder.xs]="1" [fxFlexOrder]=' 2' class="image-container"
                     fxLayout="column" fxLayoutAlign="center stretch">
-                    <div [@transitionImageScale]="{value:_mTriggerAnim, params: {animDelay: 800}}"
+                    <div [@transitionImageScale]="{value:_mTriggerAnim, params: {animDelay: 150}}"
                         class="tb-text--align-center image-area" #imageAreaView>
                         <img class="image tb-position--relative" src="assets/img/avatar/pic_avatar.png" />
                     </div>

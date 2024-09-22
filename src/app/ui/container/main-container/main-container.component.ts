@@ -5,6 +5,8 @@ import { fromEvent, Subscription } from 'rxjs';
 import { ScrollEventService } from 'src/app/core/scroll/scroll-event.service';
 import { ENTER_FORM_TOP } from '../../animations/transitions/transitions.constants';
 
+
+
 @Component({
   selector: 'app-main-container',
   templateUrl: './main-container.component.html',
@@ -45,7 +47,18 @@ export class MainContainerComponent implements OnInit {
       
       this._scrollService.dispatchUpdate(undefined);
     }
-  
+
+    scrollToTop() {
+      if (this.vContentScroller) { 
+        const element = this.vContentScroller.nativeElement;
+        element.scrollTo({ top: 0, behavior: 'smooth' });
+        console.log(element);
+        console.log("clicked");
+      } else {
+        console.warn("vContentScroller is not defined.");
+      }
+    }
+    
     
   
     private _initScrollHandler(): void {

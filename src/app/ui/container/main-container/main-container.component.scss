@@ -7,6 +7,16 @@
     margin-bottom: 4px;
 }
 
+.scrollable {
+    overflow-y: auto !important;
+    max-height: 500px; /* Set a height limit for scrolling */
+  }
+
+  .nav-link {
+    margin-right: 16px;
+    font-size: 25px; /* Adjust the value as needed */
+}
+
 .menu-option {
     cursor: pointer;
     height: 40px;

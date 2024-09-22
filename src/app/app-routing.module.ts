@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EmptyContainerComponent } from './ui/container/empty-container/empty-container.component';
 import { MainContainerComponent } from './ui/container/main-container/main-container.component';
+import { HomeExpertiseComponent } from './ui/pages/home/home-expertise/home-expertise.component'; 
+import { HomeAboutComponent } from './ui/pages/home/home-about/home-about.component';
+import { HomeShowcasesComponent } from './ui/pages/home/home-showcases/home-showcases.component';
 
 const routes: Routes = [
 
@@ -18,6 +21,12 @@ const routes: Routes = [
 
   },
 
+  // { path: 'experience', component: HomeExpertiseComponent },
+
+  // { path: 'about', component: HomeAboutComponent },
+
+  // { path: 'projects', component: HomeShowcasesComponent},
+  
   {
     path: 'documents',
     component: EmptyContainerComponent,

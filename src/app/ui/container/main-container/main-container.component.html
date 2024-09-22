@@ -5,9 +5,9 @@
         waterfallReferenceLink="dashboard-content" waterfallActiveClass="active"
         class="junkie-top-nav tb-position--absolute tb-width--full tb-z-index--3 tb-padding--v-4">
         <mat-toolbar-row>
-            <a class="tb-a--unset" matRipple routerLink="/">
-                <div ngClass.gt-xs="logo_area tb-padding--8-24" ngClass.xs="logo_area tb-padding--0" fxLayout="row"
-                    fxLayoutAlign="start center" fxLayoutGap="12px">
+            <a class="tb-a--unset" matRipple routerLink="">
+                <div ngClass.gt-xs="logo_area tb-padding--8-16" ngClass.xs="logo_area tb-padding--0" fxLayout="row"
+                    fxLayoutAlign="start center" fxLayoutGap="7px">
                     <!-- <div class="tb-height--32"> -->
                     <img class="image logo" src="assets/svg/logo/ns-logo.png">
                     <!-- </div> -->
@@ -15,6 +15,21 @@
                 </div>
             </a>
         </mat-toolbar-row>
+
+
+        <!-- <mat-toolbar-row fxLayoutAlign="end center">
+            <ng-container>
+                <div fxLayout="row">
+                    <p class="tb-cursor--pointer tb-typo--body2 tb-color--grey-700">
+                        <a mat-button routerLink="/home" class="tb-a--unset nav-link">Home</a>
+                        <a mat-button routerLink="/about" class="tb-a--unset nav-link">About</a>
+                        <a mat-button routerLink="/experience" class="tb-a--unset nav-link">Experience</a>
+                        <a mat-button routerLink="/projects" class="tb-a--unset nav-link">Projects</a>
+                    </p>
+                    
+                </div>
+            </ng-container>
+        </mat-toolbar-row> -->
 
         <mat-toolbar-row fxFlex fxHide.lt-md fxLayoutAlign="center center">
             <!-- <a matRipple

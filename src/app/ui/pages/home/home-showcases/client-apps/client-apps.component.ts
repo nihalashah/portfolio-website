@@ -138,12 +138,36 @@ export class ClientAppsComponent implements OnInit {
   },
 
    {
-     "id": "5132",
+     "id": "5133",
      "name": "Employee Management System",
      "image": "assets/img/clients/ems.png",
      "link": "https://github.com/nihalashah/Django-EMS",
      "tab": "Backend"
    },
+
+   {
+    "id": "5134",
+    "name": "Performance Management System",
+    "image": "assets/img/clients/pms.png",
+    "link": "https://github.com/nihalashah/Performance-Management-System",
+    "tab": "Backend"
+  },
+  {
+    "id": "5135",
+    "name": "Product Recommendations System",
+    "image": "assets/img/clients/recommendations.png",
+    "link": "https://github.com/nihalashah/Recommendations-System",
+    "tab": "Backend"
+  },
+
+  {
+    "id": "5136",
+    "name": "IT Audit App",
+    "image": "assets/img/clients/it-audit.png",
+    "link": "",
+    "tab": "Backend"
+  },
+
   
   //  {
   //    "id": "5133",
