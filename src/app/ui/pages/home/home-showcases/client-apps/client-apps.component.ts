@@ -122,27 +122,34 @@ export class ClientAppsComponent implements OnInit {
 
     {
      "id": "5131",
-     "name": "PepPlus: For Academic Growth",
-     "image": "assets/img/clients/pepplus.png",
-     "link": "https://play.google.com/store/apps/details?id=com.pepstudy.pepplus",
-     "tab": "Android",
+     "name": "Navigator+",
+     "image": "assets/img/clients/navigator.png",
+     "link": "https://nihalashah.github.io/Navigator/Navigator+/Navigator+/index.html",
+     "tab": "Frontend",
      "color": "#FFFFFF"
    },
 
 
    {
      "id": "5132",
-     "name": "WhichOne Shop: Amazon Flipkart",
-     "image": "assets/img/clients/whichone.png",
-     "link": "https://play.google.com/store/apps/details?id=com.whichone",
-     "tab": "Flutter"
+     "name": "Employee Management System",
+     "image": "assets/img/clients/ems.png",
+     "link": "https://github.com/nihalashah/Django-EMS",
+     "tab": "Backend"
    },
    {
-     "id": "5133",
-     "name": "Aabboo - Anonymous Chat Rooms",
-     "image": "assets/img/clients/aabboo.png",
-     "link": "https://play.google.com/store/apps/details?id=com.aabboo.social",
-     "tab": "Android"
-   }
+    "id": "5132",
+    "name": "Springboot Course API",
+    "image": "assets/img/clients/course-api.png",
+    "link": "https://github.com/nihalashah/SpringBoot-CourseApi-App",
+    "tab": "Backend"
+  },
+  //  {
+  //    "id": "5133",
+  //    "name": "Aabboo - Anonymous Chat Rooms",
+  //    "image": "assets/img/clients/aabboo.png",
+  //    "link": "https://play.google.com/store/apps/details?id=com.aabboo.social",
+  //    "tab": "Android"
+  //  }
   ];
 }
