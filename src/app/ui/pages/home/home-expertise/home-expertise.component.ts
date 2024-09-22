@@ -22,9 +22,9 @@ export class HomeExpertiseComponent implements OnInit {
   /* ********************************************************************************************
     *                anims
     */
-  _mTriggerAnim?= 'false'
+  _mTriggerAnim? = 'false'
 
-  _mTriggerImage?= 'false'
+  _mTriggerImage? = 'false'
 
 
   _mThreshold = 0.2
@@ -38,37 +38,19 @@ export class HomeExpertiseComponent implements OnInit {
     public mediaObserver: MediaObserver,
     private scroll: ScrollDispatcher, private viewPortRuler: ViewportRuler) { }
 
-    
-    description1 = [
-      'During my time at Azilen Technologies, I specialized in developing and improving full-stack Spring Boot web applications, adhering to industry standards and best coding practices for high-quality software.',
-      'Key Contributions:',
-      '• Actively contributed to significant client projects, including Catastrophic Risk Modelling Enterprise and Platform for Legal Services and Judicial Support.',
-      '• Engineered and maintained a client portal housing over 10TB of natural disaster data, improving user accessibility by 30% and streamlining information management.',
-      '• Optimized the portal’s design, reducing user support tickets by 25% and enhancing the efficiency of the support process.',
-      '• Revamped a legal services platform with an innovative pricing model, enhancing user experience and reducing client workload by 20 work-hours per week.',
-      '• Developed seamless server deployment processes using containerization, achieving a 50% faster deployment time while maintaining system stability, now utilized by 15+ developers.',
-      '• Optimized APIs to process over 1 million requests per second, supporting a user base of 700,000+ concurrent users and improving the user experience by 30%.',
-      '• This comprehensive experience sharpened my skills in Java, Spring Boot, Liferay, AngularJS, and MySQL.'
-    ];
 
-    description2 = [
-      'During my internship at Azilen Technologies, I focused on implementing robust software solutions and optimizing operational processes.',
-      'Key Contributions:',
-      '• Access Control Implementation: Designed and implemented a comprehensive access control solution for BitBucket repositories, effectively eliminating unauthorized access. This initiative ensured ISO compliance, leading to a 40% reduction in security incidents and the establishment of a new protocol for tracking permissions.',
-      '• Process Optimization: Streamlined IT workflows, achieving a 70% reduction in manual tasks and enhancing overall operational efficiency by 45%.',
-      '• Module Migration: Led the migration of the Timesheet module from Node.js to Spring Boot, resulting in a 30% improvement in performance and operational efficiency.'
-];
-
-    description3 = [
-      'During my internship at Tech Celerity Global Solutions Pvt Limited, I focused on developing a robust E-commerce platform using Java and AngularJS, complemented by efficient MySQL database management.',
-      'Key Contributions:',
-      '• Developed user-friendly, responsive interfaces to enhance the overall shopping experience, leading to improved customer satisfaction and engagement.',
-      '• Played a pivotal role in API development, ensuring seamless data processing and maintaining data accuracy across the platform.',
-      '• Collaborated effectively with cross-functional teams, fostering an environment of innovation and efficiency.',
-      '• Actively participated in code reviews, contributing to the maintenance of high coding standards and best practices.',
-      '• This experience honed my technical skills in Java, AngularJS, and MySQL, while also enhancing my ability to work collaboratively in a fast-paced development environment.'
+  description1 = [
+    'At Azilen Technologies, I developed full-stack Spring Boot web applications for major projects, including Catastrophic Risk Modelling and a Legal Services Platform. I improved a 10TB client portal, reducing support tickets by 25% and increasing accessibility by 30%. I also revamped pricing models, saving clients 20 hours of work weekly. By implementing containerized server deployments, I cut deployment times by 50%. Additionally, I optimized APIs to handle 1 million+ requests per second, enhancing the experience for 700,000+ users.'
   ];
-  
+
+  description2 = [
+    'During my internship at Azilen Technologies, I focused on enhancing security and improving operational efficiency. I implemented an access control solution for BitBucket repositories, ensuring ISO compliance and reducing security incidents by 40%. I also streamlined IT workflows, cutting manual tasks by 70% and boosting efficiency by 45%. Additionally, I led the migration of the Timesheet module from Node.js to Spring Boot, improving performance by 30%.'
+  ];
+
+  description3 = [
+    'At Tech Celerity Global Solutions Pvt Limited, I developed an E-commerce platform using Java, AngularJS, and MySQL. I created responsive, user-friendly interfaces that boosted customer satisfaction and engagement. I also developed APIs to ensure accurate data processing and collaborated with cross-functional teams to drive efficiency. Additionally, I contributed to code reviews to uphold high coding standards. This experience sharpened my skills in Java, AngularJS, and MySQL, while fostering teamwork in a fast-paced environment.'
+  ];
+
   ngOnInit(): void {
   }
 
@@ -139,13 +121,15 @@ export class HomeExpertiseComponent implements OnInit {
 
   _mTools = [
 
+
+
     {
       "id": "001",
       "name": "Java",
       "logo": "assets/img/tools/java-logo.png",
       "link": "https://www.java.com/en/",
       "tab": "back-end",
-      "color": "#bfbd1b"
+    
     },
 
     {
@@ -194,7 +178,6 @@ export class HomeExpertiseComponent implements OnInit {
       "logo": "assets/img/tools/angular.png",
       "link": "https://angular.io/",
       "tab": "web",
-      "color": "#FF4369"
     },
 
     {
@@ -219,7 +202,6 @@ export class HomeExpertiseComponent implements OnInit {
       "logo": "assets/img/tools/typescript.png",
       "link": "https://www.typescriptlang.org/",
       "tab": "web",
-      "color": "#859bed"
     },
 
     {
