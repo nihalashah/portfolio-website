@@ -129,6 +129,13 @@ export class ClientAppsComponent implements OnInit {
      "color": "#FFFFFF"
    },
 
+   {
+    "id": "5132",
+    "name": "Course API App",
+    "image": "assets/img/clients/course-api.png",
+    "link": "https://github.com/nihalashah/SpringBoot-CourseApi-App",
+    "tab": "Backend"
+  },
 
    {
      "id": "5132",
@@ -137,13 +144,7 @@ export class ClientAppsComponent implements OnInit {
      "link": "https://github.com/nihalashah/Django-EMS",
      "tab": "Backend"
    },
-   {
-    "id": "5132",
-    "name": "Springboot Course API",
-    "image": "assets/img/clients/course-api.png",
-    "link": "https://github.com/nihalashah/SpringBoot-CourseApi-App",
-    "tab": "Backend"
-  },
+  
   //  {
   //    "id": "5133",
   //    "name": "Aabboo - Anonymous Chat Rooms",

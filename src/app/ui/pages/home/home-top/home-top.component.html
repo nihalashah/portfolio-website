@@ -37,7 +37,7 @@
                 <div ngClass.gt-sm="tb-height--24" ngClass.sm="tb-height--16" ngClass.xs="tb-height--8"></div>
 
 
-                <div [@transitionTextEnter]="{value:'in', params: {animDelay: 700}}"
+                <div [@transitionTextEnter]="{value:'in', params: {animDelay: 20}}"
                 (@transitionTextEnter.done)='_onTextAnimationEnd($event)' class="detail tb-color--black-54"
                 ngClass.gt-sm="current-typo--body1" ngClass.sm="current-typo--body1" ngClass.xs="current-typo--body1">
 
@@ -54,11 +54,13 @@
                         </button>
                     </a>
                     
-                    <a href="https://www.instagram.com/nihal_shahh/" target="_blank" matTooltip="instagram">
+                    <div class="x-icon">
+                    <a href="https://x.com/nihal_shahh" target="_blank" matTooltip="x">
                         <button mat-icon-button>
-                            <mat-icon svgIcon="instagram" class="tb-icon--48 tb-color--grey-500"></mat-icon>
+                            <mat-icon svgIcon="x" class="tb-icon--48 tb-color--grey-500"></mat-icon>
                         </button>
                     </a>
+                    </div> 
                 </div>
                 
             </div>

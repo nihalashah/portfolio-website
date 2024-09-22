@@ -62,6 +62,10 @@ export class AppComponent {
         .addSvgIcon('instagram',
         sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/instagram.svg'))
 
+        .addSvgIcon('x',
+          sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/x.svg'))
+        
+
       .addSvgIcon('linkedin',
         sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/linkedin3.svg'))
       .addSvgIcon('discord',
