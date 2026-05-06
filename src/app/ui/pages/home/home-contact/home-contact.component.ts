@@ -1,10 +1,7 @@
-import { ScrollDispatcher, ViewportRuler } from '@angular/cdk/scrolling';
 import { ChangeDetectorRef, Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
-import { MediaObserver } from '@angular/flex-layout';
-import { FormArray, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { ReCaptchaV3Service } from 'ng-recaptcha';
-import { ReplaySubject, takeUntil, startWith, map, scan, distinctUntilChanged, takeWhile, switchMap, Observable } from 'rxjs';
 import { ParamPostContact } from 'src/app/api/params/contact-param';
 import { ApiContactService } from 'src/app/api/repo/api-contact.service';
 import { TRANSITION_IMAGE_SCALE, TRANSITION_TEXT } from 'src/app/ui/animations/transitions/transitions.constants';
@@ -32,32 +29,18 @@ export class HomeContactComponent implements OnInit {
 
   _mInProgress = false;
 
-  private destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
-  mOnceAnimated = false
+  private _revealObserver: IntersectionObserver | null = null;
+  mOnceAnimated = false;
 
-  /* ********************************************************************************************
-    *                anims
-    */
-  _mTriggerAnim?= 'false'
-
-
-
-  _mThreshold = 0.2
-
+  _mTriggerAnim?= 'false';
 
   @ViewChild('animRefView') vAnimRefView?: ElementRef<HTMLElement>;
 
-
   @ViewChild("formDirective", { static: true }) private formDirective?: NgForm;
-
-  
 
   constructor(public el: ElementRef,
     private _ngZone: NgZone,
     private cdr: ChangeDetectorRef,
-    public mediaObserver: MediaObserver,
-    private scroll: ScrollDispatcher,
-    private viewPortRuler: ViewportRuler,
     private apiContactService: ApiContactService,
     private formBuilder: FormBuilder,
     private recaptchaV3Service: ReCaptchaV3Service,
@@ -83,9 +66,7 @@ export class HomeContactComponent implements OnInit {
   }
 
   ngOnDestroy(): void {
-
-    this.destroyed$.next(true)
-    this.destroyed$.complete()
+    this._revealObserver?.disconnect();
   }
 
   /* ******************************************************************************
@@ -179,54 +160,14 @@ export class HomeContactComponent implements OnInit {
   public setupAnimation() {
     if (!this.vAnimRefView) return;
 
-    // console.info("home products setupAnimation: " )
-    this.scroll.ancestorScrolled(this.vAnimRefView, 100).pipe(
-      // Makes sure to dispose on destroy
-      takeUntil(this.destroyed$),
-      startWith(0),
-      map(() => {
-        if (this.vAnimRefView != null) {
-          var visibility = UiUtilsView.getVisibility(this.vAnimRefView, this.viewPortRuler)
-          // console.log("product app-item UiUtilsView visibility: ", visibility)
-          return visibility;
-        }
-        return 0;
-
-      }),
-      scan<number, boolean>((acc: number | boolean, val: number) => (val >= this._mThreshold || (acc ? val > 0 : false))),
-      // Distincts the resulting triggers 
-      distinctUntilChanged(),
-      // Stop taking the first on trigger when aosOnce is set
-      takeWhile(trigger => {
-        // console.info("app-item  !trigger || !this.mOnceAnimated",
-        //   !trigger || !this.mOnceAnimated)
-
-        return !trigger || !this.mOnceAnimated
-      }, true),
-      switchMap(trigger => new Observable<number | boolean>(observer => this._ngZone.run(() => observer.next(trigger))))
-    ).subscribe(val => {
-
-
-      // console.log("home-item setupAnimation ancestorScrolled: ", val)
-
-      if (this.mOnceAnimated) {
-        return;
-      }
-
-      if (val) {
-        // console.log("HomeProductsComponent setupAnimation setupAnimation ancestorScrolled: ", val)
-
-        this.mOnceAnimated = true
-        this._mTriggerAnim = 'true'
-        this.cdr.detectChanges()
-      }
-      // if (this.vImageArea != null) {
-      //   var visibility = UiUtilsView.getVisibility(this.vImageArea, this.viewPortRuler)
-      //   console.log("UiUtilsView visibility: ", visibility)
-      // }
-    }
-
-    )
+    this._revealObserver = UiUtilsView.observeReveal(this.vAnimRefView, () => {
+      if (this.mOnceAnimated) return;
+      this._ngZone.run(() => {
+        this.mOnceAnimated = true;
+        this._mTriggerAnim = 'true';
+        this.cdr.detectChanges();
+      });
+    });
   }
 
   /***************************************************************************************************************

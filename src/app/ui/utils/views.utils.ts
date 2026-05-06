@@ -4,6 +4,29 @@ import { ElementRef, Injectable } from "@angular/core";
 @Injectable()
 export class UiUtilsView {
 
+  // One-shot scroll-reveal: fires onReveal the first time the element enters the viewport,
+  // then disconnects. Works across window scroll and any nested scroll container, unlike
+  // CDK's ScrollDispatcher.ancestorScrolled which only fires for cdkScrollable ancestors.
+  public static observeReveal(
+    target: ElementRef<HTMLElement> | HTMLElement,
+    onReveal: () => void,
+    rootMarginBottom: string = '-80px'
+  ): IntersectionObserver | null {
+    const el = target instanceof ElementRef ? target.nativeElement : target;
+    if (!el || typeof IntersectionObserver === 'undefined') {
+      onReveal();
+      return null;
+    }
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some(e => e.isIntersecting)) {
+        onReveal();
+        observer.disconnect();
+      }
+    }, { root: null, rootMargin: `0px 0px ${rootMarginBottom} 0px`, threshold: 0 });
+    observer.observe(el);
+    return observer;
+  }
+
   // Generates chronologically orderable unique string one by one
   public static getVisibility(elm: ElementRef<HTMLElement>, viewPort: ViewportRuler) {
     var viewRect = viewPort.getViewportRect()
