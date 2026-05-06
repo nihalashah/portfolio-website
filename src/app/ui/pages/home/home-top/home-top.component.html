@@ -1,73 +1,111 @@
-<div class="tb-position--relative main" ngClass.xs="xs" ngClass.sm="sm">
-    <div class="tb-container tb-position--relative container">
-
-        <div class="content-container" fxLayout="column">
-            <!-- <div ngClass.gt-sm="tb-height--36" ngClass.sm="tb-height--20" ngClass.xs="tb-height--2"></div> -->
-
-            <div ngClass.gt-sm="tb-height--126" ngClass.sm="tb-height--45" ngClass.xs="tb-height--45"></div>
-            <h4 [@transitionTextEnter]="{value:'in', params: {animDelay: 200}}" ngClass.gt-sm="current-typo--h4"
-                ngClass.sm="current-typo--h5" ngClass.xs="current-typo--h5">Hi, I'm Nihal Shah</h4>
-            <div ngClass.gt-sm="tb-height--24" ngClass.sm="tb-height--12" ngClass.xs="tb-height--12"></div>
-            <h2 [@transitionTextEnter]="{value:'in', params: {animDelay: 300}}" ngClass.gt-sm="current-typo--h1-light"
-                ngClass.sm="current-typo--h2-light" ngClass.xs="current-typo--h3">Passionate Developer</h2>
-
-            <h2 [@transitionTextEnter]="{value:'in', params: {animDelay: 400}}" ngClass.gt-sm="current-typo--h1-light"
-                ngClass.sm="current-typo--h2-light" ngClass.xs="current-typo--h3">Crafting</h2>
-                <div ngClass.gt-sm="tb-height--12" ngClass.sm="tb-height--12" ngClass.xs="tb-height--12"></div>
-            <h2 [@transitionTextEnter]="{value:'in', params: {animDelay: 500}}" ngClass.gt-sm="current-typo--h1-light"
-                ngClass.sm="current-typo--h2-light" ngClass.xs="current-typo--h3">Impactful Software</h2>
-            <!-- <h2 [@transitionTextEnter]="{value:'in', params: {animDelay: 600}}"
-                 class="current-typo--h3"
-                ngClass.sm="current-typo--h3-light">Obsession to</h2> -->
-            <div ngClass.gt-sm="tb-height--48" ngClass.sm="tb-height--16" ngClass.xs="tb-height--8"></div>
-
-            <p [@transitionTextEnter]="{value:'in', params: {animDelay: 700}}"
-                (@transitionTextEnter.done)='_onTextAnimationEnd($event)' class="detail tb-color--black-54"
-                ngClass.gt-sm="current-typo--body1" ngClass.sm="current-typo--body1" ngClass.xs="current-typo--body1">
-                I’m a <b>Full Stack Developer</b>. Currently, I
-                am pursuing my <b>Masters in Computer Science</b>, from <b>California State University - Long Beach.</b> <br>Currently, I am exploring the field of <b>Generative AI in Software Engineering.</b> </p>
-
-                <div ngClass.gt-sm="tb-height--48" ngClass.sm="tb-height--16" ngClass.xs="tb-height--8"></div>
-
-                <p [@transitionTextEnter]="{value:'in', params: {animDelay: 700}}"
-                (@transitionTextEnter.done)='_onTextAnimationEnd($event)' class="detail tb-color--black-54"
-                ngClass.gt-sm="current-typo--body1" ngClass.sm="current-typo--body1" ngClass.xs="current-typo--body1">
-                <b>CONNECT WITH ME :</b></p>
-
-                <div ngClass.gt-sm="tb-height--24" ngClass.sm="tb-height--16" ngClass.xs="tb-height--8"></div>
-
-
-                <div [@transitionTextEnter]="{value:'in', params: {animDelay: 20}}"
-                (@transitionTextEnter.done)='_onTextAnimationEnd($event)' class="detail tb-color--black-54"
-                ngClass.gt-sm="current-typo--body1" ngClass.sm="current-typo--body1" ngClass.xs="current-typo--body1">
-
-                <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="40px">
-                    <a href="https://github.com/nihalashah" target="_blank" matTooltip="github">
-                        <button mat-icon-button>
-                            <mat-icon svgIcon="github" class="tb-icon--48 tb-color--grey-500"></mat-icon>
-                        </button>
-                    </a>
-                    
-                    <a href="https://www.linkedin.com/in/nihal-shahh/" target="_blank" matTooltip="linkedin">
-                        <button mat-icon-button>
-                            <mat-icon svgIcon="linkedin" class="tb-icon--48 tb-color--grey-500"></mat-icon>
-                        </button>
-                    </a>
-                    
-                    <div class="x-icon">
-                    <a href="https://x.com/nihal_shahh" target="_blank" matTooltip="x">
-                        <button mat-icon-button>
-                            <mat-icon svgIcon="x" class="tb-icon--48 tb-color--grey-500"></mat-icon>
-                        </button>
-                    </a>
-                    </div> 
-                </div>
-                
-            </div>
-                
-
-                
-            <div ngClass.gt-sm="tb-height--126" ngClass.sm="tb-height--72" ngClass.xs="tb-height--72"></div>
+<div class="hero" ngClass.xs="xs" ngClass.sm="sm">
+    <div class="hero-bg">
+        <div class="grid-overlay"></div>
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+        <div class="orbit orbit-1">
+            <span class="orbit-node n1">JS</span>
+            <span class="orbit-node n2">PY</span>
+            <span class="orbit-node n3">GO</span>
         </div>
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+        <div class="dots-pattern"></div>
+    </div>
+
+    <div class="tb-container hero-container" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-between center" fxLayoutGap="48px" fxLayoutGap.lt-md="32px">
+
+        <div class="hero-left" fxFlex fxFlex.lt-md="none" fxLayout="column">
+
+            <div [@transitionTextEnter]="{value:'in', params: {animDelay: 100}}" class="status-pill" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+                <span class="status-dot"></span>
+                <span>Available for new opportunities</span>
+            </div>
+
+            <div class="tb-height--24"></div>
+
+            <h4 [@transitionTextEnter]="{value:'in', params: {animDelay: 200}}" class="hello">
+                <span class="prompt">~/</span> hello, I'm
+            </h4>
+
+            <div class="tb-height--12"></div>
+
+            <h1 [@transitionTextEnter]="{value:'in', params: {animDelay: 300}}" class="name">
+                Nihal Shah
+            </h1>
+
+            <div class="tb-height--16"></div>
+
+            <h2 [@transitionTextEnter]="{value:'in', params: {animDelay: 400}}" class="title-line">
+                Software Engineer building <span class="gradient-text">distributed systems</span> &amp; cloud-native infrastructure.
+            </h2>
+
+            <div class="tb-height--24"></div>
+
+            <p [@transitionTextEnter]="{value:'in', params: {animDelay: 500}}"
+               (@transitionTextEnter.done)='_onTextAnimationEnd($event)' class="lead">
+                I ship backend-heavy microservices, event-driven pipelines, and internal tools at <span class="accent">Univsoftware</span> on AWS &amp; Kubernetes. Currently pursuing M.S. Computer Science at <span class="accent">CSU Long Beach</span>.
+            </p>
+
+            <div class="tb-height--32"></div>
+
+            <div [@transitionTextEnter]="{value:'in', params: {animDelay: 600}}" class="hero-actions" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="14px">
+                <a class="btn primary unlink" href="mailto:nihalshah.dev&#64;gmail.com">
+                    <span>Get in touch</span>
+                    <span class="arrow">→</span>
+                </a>
+                <a class="btn ghost unlink" href="https://github.com/nihalashah" target="_blank" rel="noopener">
+                    <span>View GitHub</span>
+                </a>
+            </div>
+
+            <div class="tb-height--32"></div>
+
+            <div [@transitionTextEnter]="{value:'in', params: {animDelay: 700}}" class="quick-links" fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
+                <a href="https://github.com/nihalashah" target="_blank" rel="noopener" class="quick">GitHub</a>
+                <span class="sep">·</span>
+                <a href="https://www.linkedin.com/in/nihal-shahh/" target="_blank" rel="noopener" class="quick">LinkedIn</a>
+                <span class="sep">·</span>
+                <a href="mailto:nihalshah.dev&#64;gmail.com" class="quick" fxHide.xs>nihalshah.dev&#64;gmail.com</a>
+            </div>
+        </div>
+
+        <div class="hero-right" fxFlex fxFlex.lt-md="none" [@transitionTextEnter]="{value:'in', params: {animDelay: 800}}">
+
+            <div class="floating-badge badge-aws">AWS</div>
+            <div class="floating-badge badge-k8s">K8s</div>
+            <div class="floating-badge badge-node">Node</div>
+            <div class="floating-badge badge-py">Py</div>
+
+            <div class="terminal">
+                <div class="terminal-bar">
+                    <span class="t-dot red"></span>
+                    <span class="t-dot yellow"></span>
+                    <span class="t-dot green"></span>
+                    <span class="terminal-title">~/nihal — zsh</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="line"><span class="muted">$</span> whoami</div>
+                    <div class="line out">nihal_shah</div>
+                    <div class="line"><span class="muted">$</span> cat role.json</div>
+                    <div class="line out">&#123;</div>
+                    <div class="line out">  <span class="key">"role"</span>: <span class="str">"Software Engineer"</span>,</div>
+                    <div class="line out">  <span class="key">"company"</span>: <span class="str">"Univsoftware"</span>,</div>
+                    <div class="line out">  <span class="key">"focus"</span>: [<span class="str">"backend"</span>, <span class="str">"distributed"</span>, <span class="str">"cloud"</span>],</div>
+                    <div class="line out">  <span class="key">"stack"</span>: [<span class="str">"Node.js"</span>, <span class="str">"Python"</span>, <span class="str">"Go"</span>, <span class="str">"AWS"</span>, <span class="str">"K8s"</span>],</div>
+                    <div class="line out">  <span class="key">"shipping"</span>: <span class="bool">true</span></div>
+                    <div class="line out">&#125;</div>
+                    <div class="line"><span class="muted">$</span> <span class="cursor">_</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-cue" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="6px" fxHide.lt-md>
+        <span class="scroll-text">scroll</span>
+        <span class="scroll-arrow">↓</span>
     </div>
 </div>

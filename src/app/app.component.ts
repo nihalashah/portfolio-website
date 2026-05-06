@@ -8,7 +8,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'nihal-portfolio';
+  title = 'niraj-portfolio';
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer){
 
@@ -61,10 +61,6 @@ export class AppComponent {
         sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/github.svg'))
         .addSvgIcon('instagram',
         sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/instagram.svg'))
-
-        .addSvgIcon('x',
-          sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/x.svg'))
-        
 
       .addSvgIcon('linkedin',
         sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/linkedin3.svg'))

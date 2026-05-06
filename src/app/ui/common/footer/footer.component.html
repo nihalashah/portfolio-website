@@ -1,70 +1,57 @@
-<div [@transitionReveal]="{value:_mTriggerAnim, params: {animDelay: 10}}" class="main tb-position--relative tb-overflow--hidden" ngClass.xs="xs" ngClass.sm="sm"  #animRefView>
-    <div class="tb-container--stretched">
-      <div class="background-bar">
-        <!-- <div class="vertical-line-container" fxLayoutAlign="space-between stretch">
-          <div class="vertical-lines"></div>
-          <div class="vertical-lines"></div>
-          <div class="vertical-lines"></div>
-          <div class="vertical-lines"></div>
-          <div class="vertical-lines"></div>
-        </div> -->
-      </div>
+<div [@transitionReveal]="{value:_mTriggerAnim, params: {animDelay: 500}}" class="footer-wrap" #animRefView>
+    <div class="footer-bg">
+        <div class="grid"></div>
+        <div class="big-name">NIHAL SHAH</div>
     </div>
-  
-    <div class="footer tb-container tb-position--relative" fxLayout="column">
-      <!-- <div class="logo" ngClass.xs="xs">
-          <img class="tb-image" src="assets/svg/logo_big.svg">
-        </div> -->
-  
-      <div class="tb-height--48"> </div>
-  
-      <div fxLayout="column" fxLayout.lt-md="column" fxLayoutGap="10px">
-        <p class="company-name tb-color--black-38 tb-typo--h5" ngClass.xs="xs"> 
-          Developed in <span class="tb-color--black">Angular</span>
-        </p>
-      
-        <div class="tb-height--10"> </div>
-      
-        <!-- Align copyright text and social media in one row -->
-        <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
-          
-          <!-- Copyright Text on the left -->
-          <p class="tb-cursor--pointer tb-typo--body2 tb-color--grey-500">
-            © 2024 Copyright | Nihal Shah | All rights reserved.
-          </p>
-      
-          <!-- Social Media Icons on the right -->
-          <div class="social-area" fxLayout="row" fxLayoutGap="40px">
-            <a class="" href="https://github.com/nihalashah" target="_blank" matTooltip="github">
-              <button mat-icon-button>
-                <mat-icon svgIcon="github" class="tb-icon--16 tb-color--grey-500"></mat-icon>
-              </button>
-            </a>
-      
-            <a class="" href="https://www.linkedin.com/in/nihal-shahh/" target="_blank" matTooltip="linkedin">
-              <button mat-icon-button>
-                <mat-icon svgIcon="linkedin" class="tb-icon--16 tb-color--grey-500"></mat-icon>
-              </button>
-            </a>
-      
-            <a class="" href="https://x.com/nihal_shahh" target="_blank" matTooltip="x">
-              <button mat-icon-button>
-                <mat-icon svgIcon="x" class="tb-icon--16 tb-color--grey-500"></mat-icon>
-              </button>
-            </a>
-          </div>
-      
+
+    <div class="tb-container footer-inner">
+
+        <div class="top-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-between start" fxLayoutGap="40px">
+
+            <div class="brand" fxFlex="40" fxFlex.lt-md="none">
+                <h3 class="logo-text">Nihal Shah</h3>
+                <p class="tagline">Software Engineer building distributed systems &amp; cloud-native infrastructure.</p>
+                <div class="status">
+                    <span class="dot"></span>
+                    <span>Available for new opportunities</span>
+                </div>
+            </div>
+
+            <div class="links" fxFlex fxLayout="row wrap" fxLayoutGap="40px" fxLayoutGap.xs="24px">
+                <div class="col">
+                    <h5 class="col-title">Connect</h5>
+                    <a href="mailto:nihalshah.dev&#64;gmail.com" class="link">Email</a>
+                    <a href="https://github.com/nihalashah" target="_blank" rel="noopener" class="link">GitHub</a>
+                    <a href="https://www.linkedin.com/in/nihal-shahh/" target="_blank" rel="noopener" class="link">LinkedIn</a>
+                </div>
+                <div class="col">
+                    <h5 class="col-title">Work</h5>
+                    <a href="https://github.com/nihalashah" target="_blank" rel="noopener" class="link">Projects</a>
+                    <span class="link static">Univsoftware</span>
+                </div>
+                <div class="col">
+                    <h5 class="col-title">Location</h5>
+                    <span class="link static">Los Angeles, CA</span>
+                    <span class="link static">+1 (925) 699-5479</span>
+                </div>
+            </div>
         </div>
-      </div>
-      
-      
-      
-      
-  
-  
-      <div class="tb-height--20"> </div>
-  
-  
-  
+
+        <div class="divider"></div>
+
+        <div class="bottom-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-between center" fxLayoutGap="16px">
+            <p class="copy">© 2026 Nihal Shah. Crafted with Angular &amp; lots of espresso.</p>
+            <div class="socials" fxLayout="row" fxLayoutGap="14px">
+                <a href="https://github.com/nihalashah" target="_blank" rel="noopener" matTooltip="GitHub" class="social-btn">
+                    <mat-icon svgIcon="github" class="tb-icon--16"></mat-icon>
+                </a>
+                <a href="https://www.linkedin.com/in/nihal-shahh/" target="_blank" rel="noopener" matTooltip="LinkedIn" class="social-btn">
+                    <mat-icon svgIcon="linkedin" class="tb-icon--16"></mat-icon>
+                </a>
+                <a href="mailto:nihalshah.dev&#64;gmail.com" matTooltip="Email" class="social-btn">
+                    <mat-icon class="tb-icon--16">email</mat-icon>
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
+</div>

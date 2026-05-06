@@ -122,59 +122,27 @@ export class ClientAppsComponent implements OnInit {
 
     {
      "id": "5131",
-     "name": "Navigator+",
-     "image": "assets/img/clients/navigator.png",
-     "link": "https://nihalashah.github.io/Navigator/Navigator+/Navigator+/index.html",
-     "tab": "Frontend",
+     "name": "PepPlus: For Academic Growth",
+     "image": "assets/img/clients/pepplus.png",
+     "link": "https://play.google.com/store/apps/details?id=com.pepstudy.pepplus",
+     "tab": "Android",
      "color": "#FFFFFF"
    },
 
-   {
-    "id": "5132",
-    "name": "Course API App",
-    "image": "assets/img/clients/course-api.png",
-    "link": "https://github.com/nihalashah/SpringBoot-CourseApi-App",
-    "tab": "Backend"
-  },
 
+   {
+     "id": "5132",
+     "name": "WhichOne Shop: Amazon Flipkart",
+     "image": "assets/img/clients/whichone.png",
+     "link": "https://play.google.com/store/apps/details?id=com.whichone",
+     "tab": "Flutter"
+   },
    {
      "id": "5133",
-     "name": "Employee Management System",
-     "image": "assets/img/clients/ems.png",
-     "link": "https://github.com/nihalashah/Django-EMS",
-     "tab": "Backend"
-   },
-
-   {
-    "id": "5134",
-    "name": "Performance Management System",
-    "image": "assets/img/clients/pms.png",
-    "link": "https://github.com/nihalashah/Performance-Management-System",
-    "tab": "Backend"
-  },
-  {
-    "id": "5135",
-    "name": "Product Recommendations System",
-    "image": "assets/img/clients/recommendations.png",
-    "link": "https://github.com/nihalashah/Recommendations-System",
-    "tab": "Backend"
-  },
-
-  {
-    "id": "5136",
-    "name": "IT Audit App",
-    "image": "assets/img/clients/it-audit.png",
-    "link": "",
-    "tab": "Backend"
-  },
-
-  
-  //  {
-  //    "id": "5133",
-  //    "name": "Aabboo - Anonymous Chat Rooms",
-  //    "image": "assets/img/clients/aabboo.png",
-  //    "link": "https://play.google.com/store/apps/details?id=com.aabboo.social",
-  //    "tab": "Android"
-  //  }
+     "name": "Aabboo - Anonymous Chat Rooms",
+     "image": "assets/img/clients/aabboo.png",
+     "link": "https://play.google.com/store/apps/details?id=com.aabboo.social",
+     "tab": "Android"
+   }
   ];
 }

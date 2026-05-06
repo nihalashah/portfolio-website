@@ -20,11 +20,11 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$nihal-portfolio-primary: mat.define-palette(palette.$current-color-pink);
-$nihal-portfolio-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$niraj-portfolio-primary: mat.define-palette(palette.$current-color-pink);
+$niraj-portfolio-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$nihal-portfolio-warn: mat.define-palette(mat.$red-palette);
+$niraj-portfolio-warn: mat.define-palette(mat.$red-palette);
 
 $junkielabs-typography-config : mat.define-typography-config(
   $font-family: typo.$tb-typo-family-secondary
@@ -32,11 +32,11 @@ $junkielabs-typography-config : mat.define-typography-config(
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$nihal-portfolio-theme: mat.define-light-theme((
+$niraj-portfolio-theme: mat.define-light-theme((
   color: (
-    primary: $nihal-portfolio-primary,
-    accent: $nihal-portfolio-accent,
-    warn: $nihal-portfolio-warn,
+    primary: $niraj-portfolio-primary,
+    accent: $niraj-portfolio-accent,
+    warn: $niraj-portfolio-warn,
   ),
   typography: $junkielabs-typography-config
 ));
@@ -44,13 +44,101 @@ $nihal-portfolio-theme: mat.define-light-theme((
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($nihal-portfolio-theme);
+@include mat.all-component-themes($niraj-portfolio-theme);
 
 /* You can add global styles to this file, and also import other style files */
 /* You can add global styles to this file, and also import other style files */
+
+/* ===== Theme tokens ===== */
+:root,
+[data-theme="light"] {
+  --bg-primary: #faf9f5;
+  --bg-secondary: #f5f1eb;
+  --bg-tertiary: #ffffff;
+  --bg-elevated: #ffffff;
+  --text-primary: #1f1f1f;
+  --text-secondary: rgba(31, 31, 31, 0.7);
+  --text-muted: rgba(31, 31, 31, 0.5);
+  --text-faint: rgba(31, 31, 31, 0.3);
+  --accent: #cc785c;
+  --accent-hover: #b3654d;
+  --accent-soft: rgba(204, 120, 92, 0.1);
+  --accent-soft-bd: rgba(204, 120, 92, 0.25);
+  --border: rgba(31, 31, 31, 0.1);
+  --border-soft: rgba(31, 31, 31, 0.06);
+  --grid-color: rgba(31, 31, 31, 0.04);
+  --hero-glow-1: rgba(204, 120, 92, 0.35);
+  --hero-glow-2: rgba(217, 119, 87, 0.3);
+  --hero-glow-3: rgba(232, 180, 160, 0.3);
+  --terminal-bg: #1f1f1f;
+  --terminal-border: rgba(255, 255, 255, 0.05);
+  --terminal-text: #e8e6e1;
+  --terminal-muted: #8a8780;
+  --terminal-out: #d4d2cd;
+  --terminal-key: #e8b4a0;
+  --terminal-str: #d97757;
+  --terminal-bool: #cc785c;
+  --shadow-sm: 0 4px 14px rgba(31, 31, 31, 0.08);
+  --shadow-md: 0 12px 32px rgba(31, 31, 31, 0.1);
+  --shadow-lg: 0 20px 60px rgba(31, 31, 31, 0.18);
+  --status-green: #16a34a;
+  --status-green-bg: rgba(22, 163, 74, 0.1);
+  --status-green-bd: rgba(22, 163, 74, 0.3);
+  --footer-bg: #1f1815;
+  --footer-text: rgba(250, 249, 245, 0.7);
+  --footer-text-muted: rgba(250, 249, 245, 0.4);
+  --navbar-bg: rgba(250, 249, 245, 0.7);
+  --navbar-bg-active: rgba(250, 249, 245, 0.92);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #15120e;
+  --bg-secondary: #1c1814;
+  --bg-tertiary: #221d18;
+  --bg-elevated: #2a241e;
+  --text-primary: #faf9f5;
+  --text-secondary: rgba(250, 249, 245, 0.75);
+  --text-muted: rgba(250, 249, 245, 0.5);
+  --text-faint: rgba(250, 249, 245, 0.3);
+  --accent: #e8b4a0;
+  --accent-hover: #f0c5b3;
+  --accent-soft: rgba(232, 180, 160, 0.1);
+  --accent-soft-bd: rgba(232, 180, 160, 0.25);
+  --border: rgba(250, 249, 245, 0.08);
+  --border-soft: rgba(250, 249, 245, 0.04);
+  --grid-color: rgba(232, 180, 160, 0.04);
+  --hero-glow-1: rgba(204, 120, 92, 0.35);
+  --hero-glow-2: rgba(217, 119, 87, 0.3);
+  --hero-glow-3: rgba(232, 180, 160, 0.2);
+  --terminal-bg: #0d0b08;
+  --terminal-border: rgba(255, 255, 255, 0.04);
+  --terminal-text: #e8e6e1;
+  --terminal-muted: #6b6760;
+  --terminal-out: #c8c5be;
+  --terminal-key: #e8b4a0;
+  --terminal-str: #d97757;
+  --terminal-bool: #cc785c;
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.6);
+  --status-green: #4ade80;
+  --status-green-bg: rgba(74, 222, 128, 0.1);
+  --status-green-bd: rgba(74, 222, 128, 0.3);
+  --footer-bg: #0d0b08;
+  --footer-text: rgba(250, 249, 245, 0.7);
+  --footer-text-muted: rgba(250, 249, 245, 0.4);
+  --navbar-bg: rgba(21, 18, 14, 0.7);
+  --navbar-bg-active: rgba(21, 18, 14, 0.92);
+}
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 h1,
 h2,
 h3,

@@ -1,101 +1,44 @@
 <div class="main tb-height--full junkie">
-    <mat-toolbar [@transitionFromTop]="{value:'in', params: {animDelay: 200}}" 
-    (@transitionFromTop.done)='_onToolbarAnimationEnd($event)'
-    appWidgetWaterfall [waterfallReferenceTarget]="contentScroller"
+    <mat-toolbar [@transitionFromTop]="{value:'in', params: {animDelay: 200}}"
+        (@transitionFromTop.done)='_onToolbarAnimationEnd($event)'
+        appWidgetWaterfall [waterfallReferenceTarget]="contentScroller"
         waterfallReferenceLink="dashboard-content" waterfallActiveClass="active"
-        class="junkie-top-nav tb-position--absolute tb-width--full tb-z-index--3 tb-padding--v-4">
-        <mat-toolbar-row>
-            <a class="tb-a--unset" matRipple routerLink="">
-                <div ngClass.gt-xs="logo_area tb-padding--8-16" ngClass.xs="logo_area tb-padding--0" fxLayout="row"
-                    fxLayoutAlign="start center" fxLayoutGap="7px">
-                    <!-- <div class="tb-height--32"> -->
-                    <img class="image logo" src="assets/svg/logo/ns-logo.png">
-                    <!-- </div> -->
-                    <!-- <h4 class="tb-typo--h4 tb-color--black">Junkie Labs</h4> -->
+        class="junkie-top-nav tb-position--fixed tb-width--full tb-z-index--3">
+
+        <mat-toolbar-row class="navbar-row">
+            <a class="brand-link tb-a--unset" matRipple routerLink="/">
+                <div class="brand" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+                    <span class="brand-mono">NS</span>
+                    <span class="brand-name" fxHide.xs>Nihal Shah</span>
                 </div>
             </a>
+
+            <span class="spacer"></span>
+
+            <div class="nav-actions" fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="8px">
+                <a class="nav-link" href="https://github.com/nihalashah" target="_blank" rel="noopener" fxHide.xs>GitHub</a>
+                <a class="nav-link" href="https://www.linkedin.com/in/nihal-shahh/" target="_blank" rel="noopener" fxHide.xs>LinkedIn</a>
+
+                <button class="theme-toggle" (click)="_toggleTheme()" [attr.aria-label]="'Switch to ' + (_mTheme === 'light' ? 'dark' : 'light') + ' mode'">
+                    <span class="theme-icon" *ngIf="_mTheme === 'light'">☾</span>
+                    <span class="theme-icon" *ngIf="_mTheme === 'dark'">☀</span>
+                </button>
+
+                <a class="nav-cta unlink" href="mailto:nihalshah.dev&#64;gmail.com">
+                    <span>Get in touch</span>
+                </a>
+            </div>
         </mat-toolbar-row>
-
-
-        <!-- <mat-toolbar-row fxLayoutAlign="end center">
-            <ng-container>
-                <div fxLayout="row">
-                    <p class="tb-cursor--pointer tb-typo--body2 tb-color--grey-700">
-                        <a mat-button routerLink="/home" class="tb-a--unset nav-link">Home</a>
-                        <a mat-button routerLink="/about" class="tb-a--unset nav-link">About</a>
-                        <a mat-button routerLink="/experience" class="tb-a--unset nav-link">Experience</a>
-                        <a mat-button routerLink="/projects" class="tb-a--unset nav-link">Projects</a>
-                    </p>
-                    
-                </div>
-            </ng-container>
-        </mat-toolbar-row> -->
-
-        <mat-toolbar-row fxFlex fxHide.lt-md fxLayoutAlign="center center">
-            <!-- <a matRipple
-                class="tb-a--unset tb-flex--justify-center tb-typo--h5 tb-font-weight--medium tb-color--grey-500 tb-padding--8-36-i tb-cursor--pointer"
-                ngClass.xs="tb-padding--h-16-i">
-                Contact
-            </a> -->
-            <!-- <a matRipple
-                class="tb-a--unset tb-flex--justify-center tb-typo--h5 tb-font-weight--medium tb-color--grey-500 tb-padding--8-36-i tb-cursor--pointer"
-                ngClass.xs="tb-padding--h-16-i" (click)="_scrollToElement(1)">
-                Blog
-            </a>
-            <a matRipple
-                class="tb-a--unset tb-flex--justify-center tb-typo--h5 tb-font-weight--medium tb-color--grey-500 tb-padding--8-36-i tb-cursor--pointer"
-                ngClass.xs="tb-padding--h-16-i" (click)="_scrollToElement(2)">
-                Shop
-            </a>
-            <a matRipple
-                class="tb-a--unset tb-flex--justify-center tb-typo--h5 tb-font-weight--medium tb-color--grey-500 tb-padding--8-36-i tb-cursor--pointer"
-                ngClass.xs="tb-padding--h-16-i" (click)="_scrollToElement(3)">
-                Contact us
-            </a> -->
-        </mat-toolbar-row>
-
-        <mat-toolbar-row fxLayoutAlign="end center">
-            <ng-container>
-                <div fxLayout="row">
-
-                    <!-- <div  class="menu-option" (click)="_openNavigation()">
-                        <span class="big-block tb-theme-bg--secondary"></span>
-                        <span class="thin-block tb-theme-bg--primary"></span>
-                    </div> -->
-                    <div class="tb-width--16"></div>
-                    <!-- <button mat-button color="primary" (click)="_openNavigation()">
-                        <span class="tb-typo--button">Login</span>
-                    </button> -->
-                </div>
-            </ng-container>
-        </mat-toolbar-row>
-
     </mat-toolbar>
 
-    <!-- conatiner div -->
     <mat-sidenav-container class="tb-height--full">
         <mat-sidenav-content fxLayout="column">
             <div class="tb-height--full" fxLayout="column">
-                <!--  tb-color-bg--white -->
                 <div fxFlex cdkScrollable class="tb-height--full tb-overflow--auto" id="dashboard-container"
                     #contentScroller>
-                    <!-- (activate)="onActivate($event, outlet)" -->
                     <router-outlet #outlet></router-outlet>
                 </div>
             </div>
         </mat-sidenav-content>
-
     </mat-sidenav-container>
-
-    <!-- <mat-sidenav-container class="tb-height--full">
-        <mat-sidenav-content fxLayout="column">
-            <div class="tb-height--full" fxLayout="column">
-                <div fxFlex class="tb-height--full tb-color-bg--white tb-overflow--auto" id="dashboard-container"
-                    #contentScroller>
-                    <router-outlet  #outlet></router-outlet>
-                </div>
-            </div>
-        </mat-sidenav-content>
-
-    </mat-sidenav-container> -->
 </div>

@@ -1,102 +1,141 @@
-<div class="tb-position--relative main current" ngClass.xs="xs" ngClass.sm="sm" #animRefView>
+<section class="expertise" #animRefView>
+    <div class="bg-decor">
+        <div class="blob blob-a"></div>
+        <div class="grid"></div>
+    </div>
 
+    <div class="tb-container container">
 
-    <div ngClass.gt-xs="tb-height--50" ngClass.xs="tb-height--20"></div>
+        <!-- ============== EXPERIENCE ============== -->
+        <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:100}}" class="section-head" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+            <span class="section-num">02</span>
+            <span class="section-title">Experience</span>
+            <div class="section-line"></div>
+        </div>
 
-    <div class="tb-container tb-position--relative container">
-        <div fxLayout="column" fxLayoutAlign="start stretch">
-            <div ngClass.gt-xs="tb-height-50" ngClass.xs="tb-height--20"></div>
+        <div class="tb-height--56"></div>
 
-            <div ngClass.gt-xs="tb-height--40" ngClass.xs="tb-height--30"></div>
-            <h2  ngClass.gt-sm="current-typo--h3-light"
-                ngClass.sm="current-typo--h3-light" ngClass.xs="current-typo--h4">Experience.</h2>
+        <div class="timeline">
+            <div class="timeline-line"></div>
 
-            <div ngClass.gt-xs="tb-height--20" ngClass.xs="tb-height--16"></div>
-
-
-            <div fxLayout="column" class="timeline-container">
-                <div fxLayout="row" fxLayoutAlign="start stretch" class="timeline-item">
-                    <!-- Timeline Line and Dot -->
-                    <div class="timeline-dot-container">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-line"></div>
-                    </div>
-
-                    <!-- component.html -->
-                    <div class="experience-content">
-                        <app-expertise-item jobType="Associate Software Engineer" [parts]='["Azilen Technologies"]' [descriptions]="description1">
-                        </app-expertise-item>
-                      </div>
-
-
+            <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:150}}" class="timeline-item" *ngFor="let job of _mExperience; let i = index">
+                <div class="timeline-marker" [class.current]="job.current">
+                    <div class="marker-dot"></div>
+                    <div class="marker-ring" *ngIf="job.current"></div>
                 </div>
 
-                <div fxLayout="row" fxLayoutAlign="start stretch" class="timeline-item">
-                    <div class="timeline-dot-container">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-line"></div>
-                    </div>
-
-                    <div class="experience-content">
-                        <app-expertise-item jobType="Software Engineer Intern" [parts]='["Azilen Technologies"]'
-                            [descriptions]="description2">
-                        </app-expertise-item>
-                    </div>
-
-                </div>
-
-                <div fxLayout="row" fxLayoutAlign="start stretch" class="timeline-item">
-                    <div class="timeline-dot-container">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-line"></div>
-                        <!-- Last item: no vertical line -->
-                    </div>
-
-                    <div class="experience-content">
-
-                        <app-expertise-item jobType="Full Stack Developer Intern"
-                            [parts]='["Tech Celerity Global Solutions Pvt. Ltd."]' [descriptions]="description3">
-                        </app-expertise-item>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div ngClass.gt-xs="tb-height--56" ngClass.xs="tb-height--20"></div>
-
-            <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:10}}" fxLayout="row"
-                fxLayoutAlign="start end">
-                <h2 class="tools-title current-typo--h4 tb-flex--shrink-0">Tools and Technologies.</h2>
-                <div class="tb-width--12"></div>
-                <div fxFlex="60" class="line tb-color-bg--black"></div>
-                <div fxFlex class=""></div>
-            </div>
-            <div ngClass.gt-xs="tb-height--36" ngClass.xs="tb-height--20"></div>
-
-            <div [@transitionImageScale]="{value:_mTriggerAnim, params: {animDelay: 10}}" fxLayout="row wrap"
-                fxLayoutGap="16" fxLayoutGap.xs="8">
-
-                <ng-container *ngFor="let tool of _mTools">
-
-                    <a class="tool unlink current-elevation--2" style="background-color: #fff;"
-                        fxLayout="row" fxLayoutGap="8" fxLayoutAlign="start center" target="_blank" rel="noopener"
-                        [href]="tool.link">
-
-                        <div class="tool-image-area">
-
-                            <img class="tb-image" [src]="tool.logo" />
+                <div class="timeline-card">
+                    <div class="card-head" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between start" fxLayoutGap="12px">
+                        <div>
+                            <h3 class="job-role">{{ job.role }}</h3>
+                            <div class="job-company">
+                                <span class="company-name">{{ job.company }}</span>
+                                <span class="dot-sep">·</span>
+                                <span class="job-location">{{ job.location }}</span>
+                            </div>
                         </div>
+                        <div class="job-period">
+                            <span class="period-dot" *ngIf="job.current"></span>
+                            <span>{{ job.period }}</span>
+                        </div>
+                    </div>
 
-                        <h5 class="current-typo--h5" style="color: #000;"
-                            ngClass.xs="current-typo--h6">{{tool.name}}</h5>
+                    <ul class="job-bullets">
+                        <li *ngFor="let bullet of job.bullets">{{ bullet }}</li>
+                    </ul>
 
-                    </a>
-                </ng-container>
-
+                    <div class="job-tags" fxLayout="row wrap" fxLayoutGap="8px" fxLayoutGap.xs="6px">
+                        <span class="tag" *ngFor="let tag of job.tags">{{ tag }}</span>
+                    </div>
+                </div>
             </div>
+        </div>
 
+        <div class="tb-height--96"></div>
 
+        <!-- ============== PROJECTS ============== -->
+        <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:200}}" class="section-head" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+            <span class="section-num">03</span>
+            <span class="section-title">Selected Projects</span>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="tb-height--40"></div>
+
+        <div class="projects-grid" fxLayout="row wrap" fxLayoutAlign="start stretch">
+            <div class="project-card" *ngFor="let project of _mProjects; let i = index"
+                 [@transitionText]="{value:_mTriggerAnim, params:{animDelay:250 + i * 60}}">
+                <div class="project-icon" [style.background]="project.iconBg">
+                    <span>{{ project.icon }}</span>
+                </div>
+
+                <h3 class="project-title">{{ project.title }}</h3>
+
+                <p class="project-desc">{{ project.description }}</p>
+
+                <div class="project-metrics" fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="12px">
+                    <div class="metric" *ngFor="let metric of project.metrics">
+                        <div class="metric-val">{{ metric.value }}</div>
+                        <div class="metric-label">{{ metric.label }}</div>
+                    </div>
+                </div>
+
+                <div class="project-tech" fxLayout="row wrap" fxLayoutGap="6px">
+                    <span class="tech-chip" *ngFor="let tech of project.tech">{{ tech }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tb-height--96"></div>
+
+        <!-- ============== TECH STACK ============== -->
+        <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:300}}" class="section-head" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+            <span class="section-num">04</span>
+            <span class="section-title">Tech Stack</span>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="tb-height--40"></div>
+
+        <div class="stack-grid" fxLayout="row wrap" fxLayoutAlign="start stretch">
+            <div class="stack-card" *ngFor="let cat of _mStack; let i = index"
+                 [@transitionText]="{value:_mTriggerAnim, params:{animDelay:350 + i * 60}}">
+                <div class="stack-head" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="12px">
+                    <div class="stack-icon" [style.background]="cat.iconBg">{{ cat.icon }}</div>
+                    <h4 class="stack-title">{{ cat.title }}</h4>
+                </div>
+                <div class="tb-height--16"></div>
+                <div class="stack-items" fxLayout="row wrap" fxLayoutGap="6px">
+                    <span class="stack-chip" *ngFor="let item of cat.items">{{ item }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tb-height--96"></div>
+
+        <!-- ============== EDUCATION ============== -->
+        <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:400}}" class="section-head" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+            <span class="section-num">05</span>
+            <span class="section-title">Education</span>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="tb-height--40"></div>
+
+        <div class="edu-grid" fxLayout="row" fxLayout.xs="column" fxLayoutGap="24px">
+            <div class="edu-card" *ngFor="let edu of _mEducation; let i = index"
+                 [@transitionText]="{value:_mTriggerAnim, params:{animDelay:450 + i * 100}}">
+                <div class="edu-head" fxLayout="row" fxLayoutAlign="space-between center">
+                    <span class="edu-degree">{{ edu.degree }}</span>
+                    <span class="edu-period">{{ edu.period }}</span>
+                </div>
+                <h4 class="edu-school">{{ edu.school }}</h4>
+                <p class="edu-major">{{ edu.major }}</p>
+                <div class="edu-gpa">
+                    <span class="gpa-label">GPA</span>
+                    <span class="gpa-val">{{ edu.gpa }}</span>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</section>
